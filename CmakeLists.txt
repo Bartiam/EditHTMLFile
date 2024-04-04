@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.29.0)
+
+set(MY_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/include)
+project(EditHTMLFile)
+
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
+find_package(Qt5 COMPONENTS
+	Core
+	Gui
+	Widgets
+	WebEngineWidgets
+	REQUIRED)
+
+add_subdirectory(src)
+target_link_libraries(EditHTMLFile 
+	Qt5::Core
+	Qt5::Gui
+	Qt5::Widgets
+	Qt5::WebEngineCore
+	Qt5::WebEngineWidgets)
