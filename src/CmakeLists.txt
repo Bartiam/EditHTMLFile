@@ -1,4 +1,4 @@
 cmake_minimum_required(VERSION 3.29.0)
 
-add_executable(EditHTMLFile main.cpp ${MY_INCLUDE_DIR}/MainWindow.h MainWindow.cpp)
+add_executable(EditHTMLFile main.cpp editFile.ui ${MY_INCLUDE_DIR}/MainWindow.h MainWindow.cpp)
 target_include_directories(EditHTMLFile PUBLIC ${MY_INCLUDE_DIR})
