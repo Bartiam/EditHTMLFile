@@ -17,5 +17,6 @@ public:
 	MainWindow(QMainWindow* parent);
 	
 public slots:
+	// ѕрототип слота показывающего HTML страницу;
 	void showHTML();
 };
