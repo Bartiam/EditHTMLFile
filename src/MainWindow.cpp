@@ -6,3 +6,8 @@ MainWindow::MainWindow(QMainWindow* parent)
 	// Установка родительского окна;
 	setParent(parent);
 }
+
+void MainWindow::showHTML()
+{
+	webEngineView->setHtml(plainTextEdit->toPlainText());
+}

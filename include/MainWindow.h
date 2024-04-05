@@ -1,5 +1,7 @@
 #pragma once
 #include <QMainWindow>
+#include <QWebEngineView>
+#include <QPlainTextEdit>
 
 class MainWindow : public QMainWindow
 {
@@ -7,6 +9,13 @@ class MainWindow : public QMainWindow
 	Q_OBJECT
 
 public:
+	// —оздание переменной дл€ отображени€ результата;
+	QWebEngineView* webEngineView;
+	// —оздание переменной дл€ редактировани€ HTML документа;
+	QPlainTextEdit* plainTextEdit;
 	// ѕрототип конструктора класса с установкой родительского окна;
 	MainWindow(QMainWindow* parent);
+	
+public slots:
+	void showHTML();
 };
